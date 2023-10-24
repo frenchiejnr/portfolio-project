@@ -1,0 +1,14 @@
+Header
+
+Logo
+Navigation menu (Home, About, Portfolio, Contact)
+Main content
+
+Hero section: A large image or video that showcases your best work.
+About section: A brief introduction about yourself, your skills, and your experience.
+Portfolio section: A grid of images or links to your portfolio projects.
+Contact section: A contact form or your contact information.
+Footer
+
+Copyright information
+Social media links
