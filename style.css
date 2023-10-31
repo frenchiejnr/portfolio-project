@@ -19,7 +19,9 @@ body {
   font-family: "Roboto Mono", Courier, monospace;
   color: #f9e79f;
   background-color: #000000;
+
   display: grid;
+  column-gap: 10px;
 }
 
 .flex-bars {
@@ -45,9 +47,17 @@ nav li a:hover {
   background-color: #f9e79f;
 }
 
+main {
+  gap: 10px;
+}
+
 main section {
   padding: 10px;
   scroll-margin-top: 1em;
+}
+
+section h2 {
+  padding: 0.1em 0;
 }
 
 #hero-section {
@@ -68,6 +78,7 @@ main section {
 #skills-section h3 {
   font-size: 1.25em;
   text-align: center;
+  padding: 0.2em 0;
 }
 
 .skill-container {
@@ -81,6 +92,7 @@ main section {
 
 .skill-container i {
   padding: 5px;
+  width: 20%;
 }
 
 #contact-section {
@@ -94,6 +106,35 @@ footer {
 }
 /* // Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
+  main {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+  }
+
+  section {
+    grid-column: 1 / span 8;
+  }
+
+  #hero-section {
+    grid-row: 1;
+  }
+  #about-section {
+    grid-row: 2;
+  }
+  #portfolio-section {
+    grid-row: 3;
+  }
+
+  #skill-section {
+    grid-row: 4;
+  }
+
+  #contact-section {
+    grid-row: 5;
+  }
+
   #skills-section > div {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -129,7 +170,14 @@ footer {
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-  #about-section h2 {
+  body {
+    grid-template-rows: 40px auto 40px;
+  }
+
+  nav li {
+    display: inline-block;
+  }
+  section h2 {
     text-align: center;
   }
   .center-container {
@@ -141,6 +189,29 @@ footer {
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
+  main {
+    grid-template-columns: repeat(12, 1fr);
+    grid-column: 1 / span 12;
+    grid-template-rows: repeat(4, 1fr);
+  }
+
+  #hero-section {
+    grid-column: 9 / span 4;
+    grid-row: 1 / -1;
+  }
+  #about-section {
+    grid-column: 1 / span 8;
+    grid-row: 1;
+  }
+  #portfolio-section {
+    grid-column: 1 / span 8;
+    grid-row: 2;
+  }
+
+  #contact-section {
+    grid-column: 1 / span 8;
+    grid-row: 4;
+  }
   #skills-section {
     grid-column: 1 / span 8;
     grid-row: 3;
@@ -164,6 +235,17 @@ footer {
     grid-row: 2;
     padding: 0 10px;
   }
+
+  header {
+    grid-row: 1 / span 1;
+    grid-column: 1 / span 12;
+  }
+
+  footer {
+    border: 1px solid aliceblue;
+    grid-column: 1 / span 12;
+    overflow: hidden;
+  }
 }
 
 /* X-Large devices (large desktops, 1200px and up) */
@@ -172,52 +254,4 @@ footer {
 
 /* XX-Large devices (larger desktops, 1400px and up) */
 @media (min-width: 1400px) {
-  body {
-    display: grid;
-    /* width: 100%; */
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 40px auto 40px;
-    column-gap: 10px;
-  }
-
-  header {
-    grid-row: 1 / span 1;
-    grid-column: 1 / span 12;
-  }
-
-  nav li {
-    display: inline-block;
-  }
-
-  main {
-    display: grid;
-    width: 100%;
-    grid-template-columns: repeat(12, 1fr);
-    grid-column: 1 / span 12;
-    grid-template-rows: repeat(4, 1fr);
-    gap: 10px;
-  }
-
-  #hero-section {
-    grid-column: 9 / span 4;
-    grid-row: 1 / -1;
-  }
-  #about-section {
-    grid-column: 1 / span 8;
-    grid-row: 1;
-  }
-  #portfolio-section {
-    grid-column: 1 / span 8;
-    grid-row: 2;
-  }
-
-  #contact-section {
-    grid-column: 1 / span 8;
-    grid-row: 4;
-  }
-  footer {
-    border: 1px solid aliceblue;
-    grid-column: 1 / span 12;
-    overflow: hidden;
-  }
 }
