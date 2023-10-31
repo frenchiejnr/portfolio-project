@@ -12,13 +12,14 @@ Yellow: #f9e79f */
 
 html,
 body {
-  height: 100vh;
+  min-height: 100vh;
 }
 
 body {
   font-family: "Roboto Mono", Courier, monospace;
   color: #f9e79f;
   background-color: #000000;
+  display: grid;
 }
 
 .flex-bars {
