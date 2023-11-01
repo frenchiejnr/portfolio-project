@@ -62,6 +62,9 @@ section h2 {
 
 #hero-section {
   border: 1px solid blueviolet;
+  background-image: url("./developer-hero-landscape.jpg");
+  background-size: cover;
+  background-position: center;
 }
 
 #about-section {
@@ -189,6 +192,11 @@ footer {
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
+  #hero-section {
+    background-image: url("./developer-hero-portrait.jpg");
+    background-size: cover;
+    background-position: center;
+  }
   main {
     grid-template-columns: repeat(12, 1fr);
     grid-column: 1 / span 12;
