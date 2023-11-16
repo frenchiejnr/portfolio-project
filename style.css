@@ -107,6 +107,13 @@ footer {
   font-size: 0.5em;
   overflow: hidden;
 }
+
+@media (max-width: 575px) {
+  #hero-section {
+    height: 200px;
+  }
+}
+
 /* // Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
   main {
